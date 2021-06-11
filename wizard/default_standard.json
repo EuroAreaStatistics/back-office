@@ -1,0 +1,33 @@
+ {
+    "charts": {
+        "1": {
+            "definition": {
+                "en": "[Add indicator definition]"
+            },
+            "title": {
+                "en": "[Add indicator title. Short!]"
+            }
+        }
+    },
+    "project": {
+        "tabs": [
+            "1"
+        ],
+         "title": {
+             "en": "[Add project title]"
+         }
+     },
+    "tabs": {
+        "1": {
+            "charts": [
+                "1"
+            ],
+            "teaser": {
+                "en": ""
+            },
+            "title": {
+                "en": "[Add tab title]"
+            }
+        }
+    }
+ }

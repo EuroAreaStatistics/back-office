@@ -1,0 +1,13 @@
+{
+    "name": "euro-area-statistics/back-office",
+    "type": "project",
+    "require": {
+        "php": ">=7.4",
+        "composer/ca-bundle": "^1.2.10"
+    },
+    "config": {
+        "platform": {
+            "php": "7.4.3"
+        }
+    }
+}

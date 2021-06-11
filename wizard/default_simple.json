@@ -1,0 +1,34 @@
+ {
+    "charts": {
+        "1": {
+            "definition": {
+                "en": ""
+            },
+            "title": {
+                "en": ""
+            },
+            "region": "default",
+            "type": "translatedLabels"
+        }
+    },
+    "project": {
+        "tabs": [
+            "1"
+        ],
+         "title": {
+             "en": ""
+         }
+     },
+    "tabs": {
+        "1": {
+            "charts": [
+                "1"
+            ],
+            "region": "default",
+            "type": "translatedLabels",
+             "title": {
+               "en": ""
+            }
+        }
+    }
+ }
