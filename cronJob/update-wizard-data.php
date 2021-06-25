@@ -172,16 +172,6 @@ function updateProjects($projectsWizard, $upto, $force, $ConfigEdit, $countryMap
               $time = $now;
             }
             $newData = refreshData($data, $res, $countryMap);
-            if ($project === 'dp-inflation-c-1-2-2') {
-              // scale values down by 10
-              foreach ($newData['data'] as &$v1) {
-                foreach ($v1 as &$v2) {
-                  if ($v2 !== NULL) {
-                    $v2 /= 10;
-                  }
-                }
-              }
-            }
             $sameData = ($newData === $data);
             $newData['fetchDate'] = gmdate('Y-m-d\TH:i:s', $time->getTimeStamp()) . '.000Z';
             $sameTimestamp = ($newData['fetchDate'] === $fetchDate);
