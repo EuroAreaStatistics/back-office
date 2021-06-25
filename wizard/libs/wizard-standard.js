@@ -137,7 +137,7 @@ function runWizard(options) {
                  }
              }
              if (field == null || field == 'options') {
-                 var required = ['dataSource'];
+                 var required = [];
                  required.forEach(function (k) {
                      if (!(k in self.options) || self.options.k == '') {
                          errors.push(k+' is required');
