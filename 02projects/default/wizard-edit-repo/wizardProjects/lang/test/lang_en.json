@@ -1,0 +1,20 @@
+{
+    "project": {
+        "title": "test",
+        "options": {
+            "dataSource": "fasdfasf"
+        }
+    },
+    "charts": {
+        "1": {
+            "title": "[Add indicator title. Short!]",
+            "definition": "[Add indicator definition]"
+        }
+    },
+    "tabs": {
+        "1": {
+            "title": "test",
+            "teaser": ""
+        }
+    }
+}
