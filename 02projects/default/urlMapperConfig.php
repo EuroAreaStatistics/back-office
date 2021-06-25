@@ -1,6 +1,7 @@
 <?php
 
-    $shareLanguagesProjects[''] = array('en');
+    $shareLanguagesProjects['langtheme'] = array('en');
+    $editProjects = [];
 
     $ConfigEdit = array(
         'email'         => 'test@localhost',
