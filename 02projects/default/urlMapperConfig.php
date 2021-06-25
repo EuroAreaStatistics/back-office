@@ -4,7 +4,7 @@
     $editProjects = [];
 
     $ConfigEdit = array(
-        'email'         => 'test@localhost',
+        // 'email'         => 'test@localhost',
         'admin'         => 'admin',
         'languages'     => array('en','fr','de'),
         'allowedTags'   => array(

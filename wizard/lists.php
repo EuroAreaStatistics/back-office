@@ -26,7 +26,9 @@ function newProject($title,$user,$mode) {
 
   try {
     $project = $projects->addDefault($title,$user,__DIR__.'/default_'.$mode.'.json');
-    mail($ConfigEdit['email'], "New project '".$project->getURL()."'", "Changed by $_SERVER[REMOTE_USER] ($_SERVER[REMOTE_ADDR])\n");
+    if (isset($ConfigEdit['email'])) {
+      mail($ConfigEdit['email'], "New project '".$project->getURL()."'", "Changed by $_SERVER[REMOTE_USER] ($_SERVER[REMOTE_ADDR])\n");
+    }
     return $project->getURL();
   } catch (Exception $e) {
     header($_SERVER["SERVER_PROTOCOL"].' 500 Internal Server Error');
@@ -43,7 +45,9 @@ function setLiveProjects($languages) {
 
   try {
     $projects->setLanguages($languages);
-    mail($ConfigEdit['email'], "Updated live projects", "Changed by $_SERVER[REMOTE_USER] ($_SERVER[REMOTE_ADDR])\n");
+    if (isset($ConfigEdit['email'])) {
+      mail($ConfigEdit['email'], "Updated live projects", "Changed by $_SERVER[REMOTE_USER] ($_SERVER[REMOTE_ADDR])\n");
+    }
   } catch (Exception $e) {
     header($_SERVER["SERVER_PROTOCOL"].' 500 Internal Server Error');
     header('Content-type: text/plain');

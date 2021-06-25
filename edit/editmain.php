@@ -122,7 +122,9 @@ switch ($mode) {
           'Content-type: text/plain; charset=utf-8',
           'Content-Transfer-Encoding: base64',
         ));
-        mail($ConfigEdit['email'], "New translation for $project ($language)", base64_encode($body), $headers);
+        if (isset($ConfigEdit['email'])) {
+          mail($ConfigEdit['email'], "New translation for $project ($language)", base64_encode($body), $headers);
+        }
         $data['status'][] = "";
         $updated->updateProject($project, $language, $diffs, $upToDate);
       }
@@ -173,7 +175,9 @@ switch ($mode) {
           'Content-type: text/plain; charset=utf-8',
           'Content-Transfer-Encoding: base64',
         ));
-        mail($ConfigEdit['email'], "New translation for wizard $project ($language)", base64_encode($body), $headers);
+        if (isset($ConfigEdit['email'])) {
+          mail($ConfigEdit['email'], "New translation for wizard $project ($language)", base64_encode($body), $headers);
+        }
         $updated->updateProject($project, $language, $diffs, $upToDate);
         $data['status'][] = "";
       }
@@ -212,7 +216,9 @@ switch ($mode) {
         array_walk_recursive($var, 'cleanEditorFields');
         $diffs = $editPHP->diff($var);
         $editPHP->save($var);
-        @mail($ConfigEdit['email'], "New translation for langtheme ($language)", "Changed by $_SERVER[REMOTE_USER] ($_SERVER[REMOTE_ADDR])");
+        if (isset($ConfigEdit['email'])) {
+          mail($ConfigEdit['email'], "New translation for langtheme ($language)", "Changed by $_SERVER[REMOTE_USER] ($_SERVER[REMOTE_ADDR])");
+        }
         $data['status'][] = "";
         $updated->updateProject('_langtheme', $language, $diffs, $upToDate);
       }
@@ -248,7 +254,9 @@ switch ($mode) {
         array_walk_recursive($var, 'cleanEditorFields');
         $diffs = $editPHP->diff($var);
         $commit = $editPHP->save($var);
-        @mail($ConfigEdit['email'], "New translation for langmain ($language)", "Changed by $_SERVER[REMOTE_USER] ($_SERVER[REMOTE_ADDR])");
+        if (isset($ConfigEdit['email'])) {
+          mail($ConfigEdit['email'], "New translation for langmain ($language)", "Changed by $_SERVER[REMOTE_USER] ($_SERVER[REMOTE_ADDR])");
+        }
         $updated->updateProject('_langmain', $language, $diffs, $upToDate);
         $data['status'][] = "";
       }

@@ -127,7 +127,9 @@ function saveProject($config) {
     $project = $projects->update($config);
     $updated = new ProjectUpdates($themeURL, $ConfigEdit['languages']);
     $updated->updateProject($project->getURL(), 'en', $project->getPreviousCommit(), FALSE);
-    mail($ConfigEdit['email'], "Updated project '".$project->getURL()."'", "Changed by $_SERVER[REMOTE_USER] ($_SERVER[REMOTE_ADDR])\n");
+    if (isset($ConfigEdit['email'])) {
+      mail($ConfigEdit['email'], "Updated project '".$project->getURL()."'", "Changed by $_SERVER[REMOTE_USER] ($_SERVER[REMOTE_ADDR])\n");
+    }
   } catch (Exception $e) {
     onException($e);
   }
