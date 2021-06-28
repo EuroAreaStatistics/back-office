@@ -215,10 +215,6 @@ $(function() {
     } else {
       if (project.substring(0, 2) == 's-') {
         window.open (snapshotsURL + '/snapshotspreview?project=' + project + '&lg=' + lang, '_blank');
-      } else if (project === 'digpub-1') {
-        window.open ($(this).attr('data-url') + '../epub' + '?lang=' + lang, '_blank');
-      } else if (project === 'digpub-2') {
-        window.open ($(this).attr('data-url') + '../digital-publication/inflation' + '?lang=' + lang, '_blank');
       } else {
         window.open ($(this).attr('data-url') + project + '?lg=' + lang, '_blank');
       }

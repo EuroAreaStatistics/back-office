@@ -53,11 +53,7 @@
             <td><div class="labels head">Add/edit <span class='red'><?= htmlspecialchars($data['language']) ?></span> version here <button class="htmlButton item">download</button> <form method="post" enctype="multipart/form-data"><div class="htmlUpload" style="position:relative;overflow:hidden"><button class="item">upload</button><input type="file" name="upload" style="position:absolute;top:0;left:0;opacity:0"></div></form></div></td>
         </tr>
 
-<?php
-    foreach ($data['fields'] as $d1):
-    if   ($project == 'pisa2015-test' && strpos ( $d1['keyName'] , '|label' ) == TRUE) continue;
-
-?>
+   <?php foreach ($data['fields'] as $d1): ?>
     <tr>
         <td><div class=""><?= htmlspecialchars($d1['keyName']) ?></div></td>
         <td>
