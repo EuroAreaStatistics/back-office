@@ -9,17 +9,13 @@
     "jquery": "1.8.3",
     "jQuery-ajaxTransport-XDomainRequest": "1.0.4",
     "jquery-file-upload": "9.9.2",
-    "jquery-json": "git://github.com/krinkle/jquery-json#2.4.0",
     "jquery-ui": "1.11.3",
     "modernizr": "2.6.2",
     "normalize-css": "git://github.com/necolas/normalize.css#1.0.1",
     "papa.parse": "4.1.0",
     "tablesorter": "git://github.com/christianbach/tablesorter#6b998d9dea1bb7e98bdc0e3ce4a2504a970c2140",
     "tinymce-dist": "4.0.21",
-    "jquery-migrate": "1.2.1",
-    "jquery-1.11.3": "jquery#1.11.3",
-    "jquery-textfill": "0.6.0",
-    "requirejs": "2.1.22"
+    "jquery-1.11.3": "jquery#1.11.3"
   },
   "preen": {
     "blueimp-load-image": [
@@ -52,10 +48,6 @@
       "css/jquery.fileupload.css",
       "img/*"
     ],
-    "jquery-json": [
-      ".bower.json",
-      "build/jquery.json.min.js"
-    ],
     "jquery-ui": [
       ".bower.json",
       "jquery-ui.min.js",
@@ -67,11 +59,6 @@
       "jquery.tablesorter.min.js",
       "themes/blue/*.css",
       "themes/blue/*.gif"
-    ],
-    "jquery-textfill": [
-      ".bower.json",
-      "source/jquery.textfill.min.js",
-      "source/jquery.textfill.js"
     ]
   },
   "resolutions": {

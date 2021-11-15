@@ -19,8 +19,6 @@ License information missing from the .bower.json files are documented below.
 
 * tinymce-dist: LGPL-2.1
 * gosquared-flags: MIT
-* jquery-json: MIT
-* jquery-migrate: MIT
 * jquery-ui: MIT
 * modernizr: MIT
 * tablesorter: MIT
