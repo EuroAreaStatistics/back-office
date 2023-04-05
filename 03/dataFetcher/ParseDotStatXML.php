@@ -123,7 +123,21 @@ class OECDDataParser {
 				$year = $xpath->evaluate('string(g:ObsDimension/@value)', $dataPoint);
 				$value = $xpath->evaluate('number(g:ObsValue/@value)', $dataPoint);
 				if (is_nan($value)) $value = null;
-                                else $value *= $mult;
+				$status = $xpath->evaluate('string(g:Attributes/g:Value[@id="OBS_STATUS"]/@value)', $dataPoint);
+				if ($status === '') {
+					// default status A (Normal value)
+					$status = 'A';
+				}
+				// ignore values other than:
+				//   A - Normal value
+				//   P - Provisional value
+				//   U - Low reliability
+				if (!in_array($status, ['A', 'P', 'U'])) {
+					$value = null;
+				}
+				if ($value !== null) {
+					$value *= $mult;
+				}
 				$indexArr[$yearLabel] = $year;
 				$data->setData($indexArr,$value);
 			}
