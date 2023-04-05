@@ -181,7 +181,7 @@ $(function() {
   function saveFile(type, charset, name) {
     if (window.navigator.msSaveOrOpenBlob) {
       return function(data) {
-        blob = new Blob(data, { type: type + ';' + charset });
+        blob = new Blob([data], { type: type + ';' + charset });
         window.navigator.msSaveOrOpenBlob(blob, name);
       };
     }
