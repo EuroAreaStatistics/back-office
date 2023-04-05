@@ -104,6 +104,11 @@ function refreshData($oldData, $xmlStr, $countryMap) {
       }
     }
   }
+  if ($location === NULL) {
+    if (isset($keyMap['REF_AREA'])) {
+      $location = 'REF_AREA';
+    }
+  }
   if ($location === NULL) throw new Exception("no candidate for LOCATION");
   if ($year === NULL) throw new Exception("no candidate for YEAR");
   unset($keyMap[$location]);
