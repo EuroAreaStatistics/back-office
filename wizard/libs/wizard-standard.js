@@ -27,7 +27,7 @@ function runWizard(options) {
     if (mode == 'slide' || mode == 'complex') {
         var MAX_TABS = 100;
     } else {
-        var MAX_TABS = 4;
+        var MAX_TABS = 6;
     }
 
 
